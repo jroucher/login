@@ -8,7 +8,7 @@ Feature: Login section
         And login
        Then Show Message "Error in user/password or tenant name"
 
-    @VDCPORTALS-170
+    @VDCPORTALS-160
     Scenario: [OK]Login
         Given goto page
           And select language "en"
