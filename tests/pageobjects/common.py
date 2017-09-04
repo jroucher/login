@@ -14,6 +14,9 @@ class CommonPageObject(PageObject):
         """ Open app url in browser
         :returns: this page object instance
         """
+
+
+
         url = self.config.get('Common', 'url')
         self.driver.get(url)
         return self

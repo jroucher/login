@@ -9,21 +9,18 @@ class LoginPageObject(CommonPageObject):
         return self;
 
     def setElements(self):
-        self.tenant = InputText(By.NAME, 'tenant');
-        self.name = InputText(By.NAME, 'name');
-        self.password = InputText(By.NAME, 'password');
-        self.loginBtn = Button(By.ID, 'loginFormSubmit');
-        return self;
+        self.User = InputText(By.ID, "ember456");
+        self.password = InputText(By.ID, "ember468");
 
     def waitToDrawSection(self):
-        self.utils.wait_until_element_visible(PageElement(By.NAME, "loginForm").locator)
+        self.utils.wait_until_element_present(PageElement(By.ID, "ember456"));
+        self.utils.wait_until_element_present(PageElement(By.ID, "ember468"));
         return self
 
     def getUserName(self):
         return Text(By.ID, "user-header")
 
     def resetForm(self):
-        self.tenant.clear();
-        self.name.clear();
+        self.User.clear();
         self.password.clear();
         return self;
